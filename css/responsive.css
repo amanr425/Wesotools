@@ -1,0 +1,255 @@
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .hamburger-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #AC1929;
+        border-radius: 12px;
+        margin-left: auto;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: -20px;
+        right: 0;
+    }
+
+    .hamburger-menu-btn img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .custom-navbar {
+        padding: 10px 0;
+        height: 90px;
+        background: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 20px 25px -5px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
+    }
+
+    .sidebar-menu {
+        position: fixed;
+        top: 0;
+        left: -1000%;
+        width: 100%;
+        background: #ffffff;
+        z-index: 9999;
+        transition: 0.3s ease all;
+        display: flex;
+        padding: 45px 30px;
+        height: 100vh;
+    }
+
+    .sidebar-menu.sidebar-toggle {
+        left: 0;
+    }
+
+    .sidebar-menu .navbar-list li {
+        margin: 10px 0;
+    }
+
+    .sidebar-menu .navbar-list li a {
+        color: #000000;
+    }
+
+    .brand-logo img {
+        height: 75px;
+    }
+
+    .custom-navbar.toggle-class {
+        height: 85px;
+    }
+
+    .custom-navbar.toggle-class .brand-logo img {
+        height: 65px;
+    }
+
+    .banner-fluid {
+        height: auto;
+        padding: 0;
+        margin-top: 90px;
+    }
+
+    .banner-details-left {
+        padding-top: 30px;
+    }
+
+    .banner-details-left h1 {
+        margin: 0 0 15px;
+        font-size: 32px;
+    }
+
+    .banner-details-left p {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .btn.theme-btn {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+
+    .intro-tabs-list {
+        grid-template-columns: 180px 180px;
+        -ms-grid-rows: 180px 180px;
+        grid-template-rows: 180px 180px;
+        justify-content: center;
+        margin: 45px 0;
+    }
+
+    .intro-tabs-item {
+        padding: 50px 20px;
+    }
+
+    .intro-tabs-item h5 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .intro-tabs-item p {
+        font-size: 15px;
+    }
+
+    .our-partner-fluid, .about-us-fluid, .services-fluid, .our-products-fluid, .customer-fluid,
+    .contact-fluid {
+        padding: 45px 0;
+    }
+
+    .common-heading h5 {
+        font-size: 32px;
+    }
+
+    .common-heading img {
+        height: 12px;
+    }
+
+    .our-partner-fluid .common-heading {
+        padding-bottom: 10px;
+    }
+
+    .about-us-fluid .row.align-items-center {
+        flex-direction: column-reverse;
+    }
+
+    .about-us-fluid .common-heading {
+        padding-left: 12px;
+    }
+
+    .about-us-fluid .common-heading h5 {
+        margin-bottom: 15px;
+    }
+
+    .about-us-fluid .common-heading p {
+        font-size: 15px;
+    }
+
+    .about-us-fluid .common-heading h6 {
+        font-size: 20px;
+    }
+
+    .product-range-details {
+        margin-top: 20px;
+        padding: 20px 24px 45px;
+    }
+
+    .details-inner .count {
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
+    }
+
+    .details-inner .details {
+        width: calc(100% - 32px);
+        font-size: 13px;
+        padding-left: 10px;
+    }
+
+    .details-inner {
+        padding: 6px 0;
+    }
+
+    .services-fluid .common-heading {
+        padding-bottom: 0;
+    }
+
+    .service-card {
+        margin-top: 24px;
+    }
+
+    .common-heading p {
+        font-size: 15px;
+    }
+
+    .common-heading {
+        padding-bottom: 20px;
+    }
+
+    .nav-tabs.nav-tabs-custom .nav-item .nav-link {
+        margin: 10px 0;
+        padding: 15px 40px;
+    }
+
+    .nav-tabs.nav-tabs-custom {
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .our-products-fluid .tab-content > .tab-pane {
+        padding: 0;
+    }
+
+    #owl-demo-1 .owl-dots .owl-dot, #owl-demo-2 .owl-dots .owl-dot {
+        width: 15px;
+        height: 15px;
+    }
+
+    #owl-demo-1 .owl-dots .owl-dot span, #owl-demo-2 .owl-dots .owl-dot span {
+        width: 7px;
+        height: 7px;
+    }
+
+    .col-12.col-sm-12.col-md-6.ps-5 {
+        padding-left: 12px !important;
+    }
+
+    .contact-inner {
+        margin: 30px 0 0;
+    }
+
+    .sub-branch-card {
+        margin-bottom: 24px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+
+    .social-link li a {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .footer-fluid {
+        padding: 30px 0 15px;
+    }
+
+    .footer-bottom {
+        padding-top: 15px;
+        margin-top: 15px;
+    }
+
+    .footer-fluid .brand-logo img {
+        height: 60px;
+    }
+
+    .nav-link-footer li a {
+        padding: 1px 0;
+    }
+
+    .contact-fluid {
+        padding-bottom: 25px;
+    }
+}
