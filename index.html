@@ -23,7 +23,7 @@
             <button class="bg-transparent p-0 border-0 rounded-0 btn close-btn" onclick="removeSidebar();">Close</button>
             <ul class="list-inline navbar-list">
                 <li>
-                    <a class="nav-link active" href="index.html" onclick="removeSidebar();">Home</a>
+                    <a class="nav-link active" href="#home" onclick="removeSidebar();">Home</a>
                 </li>
                 <li>
                     <a class="nav-link" href="#about_us" onclick="removeSidebar();">About Us</a>
@@ -56,7 +56,7 @@
                 </button>
                 <ul class="list-inline navbar-list mb-0 text-end d-none d-sm-none d-md-block">
                     <li class="list-inline-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link active" href="#home">Home</a>
                     </li>
                     <li class="list-inline-item">
                         <a class="nav-link" href="#about_us">About Us</a>
@@ -75,7 +75,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid banner-fluid">
+<div class="container-fluid banner-fluid" id="home">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12 col-sm-12 col-md-5 banner-details-left">
@@ -1669,47 +1669,45 @@
 
 
 </script>
-<!-- <script>
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.forEach(l => l.classList.remove('active')); // remove from all
-            link.classList.add('active'); // add to clicked one
-        });
-    });
-</script> -->
-<!-- <script>
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            
-        });
-    });
-</script> -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    // Restrict to navbar and sidebar only
-    const scopedMenus = ['#navbar', '#sidebar'];
+    const navbar = document.querySelector("#navbar");
+    const navLinks = navbar.querySelectorAll(".nav-link");
 
-    scopedMenus.forEach(menuSelector => {
-        const container = document.querySelector(menuSelector);
-        if (!container) return;
+    const sectionIds = Array.from(navLinks)
+        .map(link => link.getAttribute("href"))
+        .filter(href => href.startsWith("#"))
+        .map(id => document.querySelector(id))
+        .filter(Boolean); // remove nulls if any ID not found
 
-        const scopedLinks = container.querySelectorAll('.nav-link');
-        
-        scopedLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                // Remove active only from this specific menu's links
-                scopedLinks.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-            });
+    function updateActiveLink() {
+
+        const scrollPos = window.scrollY;
+        let activeFound = false;
+
+        sectionIds.forEach((section, index) => {
+            const sectionTop = section.offsetTop - 100; // adjust offset
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+
+                navLinks.forEach((link, i) => {
+                    
+                    link.classList.toggle("active", i === index);                  
+                });
+
+                activeFound = true;
+            }
         });
-    });
+
+        if (!activeFound) {
+            navLinks.forEach(link => link.classList.remove("active"));
+        }
+    }
+
+    window.addEventListener("scroll", updateActiveLink);
+    updateActiveLink(); // call on load
 });
 </script>
-
-
 </body>
 </html>
