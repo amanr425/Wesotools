@@ -131,7 +131,7 @@
                     <div class="col-12">
                         <div class="row mx-0 partner-card">
                             <div class="col-12">
-                                <h5>TOKU</h5>
+                                <h5>TOKU PNEUMATICS</h5>
                             </div>
                         </div>
                     </div>
@@ -187,7 +187,7 @@
                     India with a
                     <b>
                         commitment to quality, service, and reliability. With a strong portfolio of authorized
-                        dealerships including Toku, EBARA Pumps, Groz Net Tools, Kirloskar Brothers Ltd., Karam Safety, and Symphony
+                        dealerships including Toku Pneumatics, EBARA Pumps, Groz Net Tools, Kirloskar Brothers Ltd., Karam Safety, and Symphony
                         Coolers, we specialize in six core
                     </b>
                     categories: Imported Spares, Water Pumps, PPEs, Industrial Tools, Electrical Items, and Lubricants.
@@ -1667,15 +1667,49 @@
             });
     });
 
-    const navLinks = document.querySelectorAll('.nav-link');
 
+</script>
+<!-- <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navLinks.forEach(l => l.classList.remove('active')); // remove from all
             link.classList.add('active'); // add to clicked one
         });
     });
+</script> -->
+<!-- <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            
+        });
+    });
+</script> -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Restrict to navbar and sidebar only
+    const scopedMenus = ['#navbar', '#sidebar'];
+
+    scopedMenus.forEach(menuSelector => {
+        const container = document.querySelector(menuSelector);
+        if (!container) return;
+
+        const scopedLinks = container.querySelectorAll('.nav-link');
+        
+        scopedLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Remove active only from this specific menu's links
+                scopedLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+    });
+});
 </script>
+
 
 </body>
 </html>
